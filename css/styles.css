@@ -376,3 +376,6 @@ footer {
 .infotraje .vermas:hover {
     background: #098ad0;
 }
+.cuenta-usuario {
+    text-decoration: none;
+}
