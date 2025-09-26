@@ -109,9 +109,7 @@ section h2 {
   box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
 }
 
-.prod:hover {
-  transform: scale(1.03);
-}
+
 
 .prod img {
   width: 100%;
@@ -321,7 +319,6 @@ footer {
 }
 
 .categoriatrajedebano {
-    display: grid;
     padding: 0 20px 40px 20px;
 }
 
