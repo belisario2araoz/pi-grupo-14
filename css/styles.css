@@ -1,0 +1,378 @@
+/* ======== RESET GENERAL ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ======== HEADER ======== */
+header {
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav form input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+header nav form button {
+  background: #00a8e8;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+header nav form button:hover {
+  background: #0077b6;
+}
+
+.logres a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.logres a:hover {
+  text-decoration: underline;
+}
+
+/* ======== ASIDE MENU ======== */
+aside {
+  background: #fff;
+  padding: 20px;
+  width: 220px;
+  border-right: 1px solid #ddd;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin-bottom: 15px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+aside ul li a:hover {
+  color: #023e8a;
+}
+
+/* ======== MAIN PRODUCTOS ======== */
+main {
+  display: flex;
+  padding: 20px;
+}
+
+section {
+  flex: 1;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+
+
+.prod {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+
+
+.prod img {
+  width: 100%;
+  height: auto;
+}
+
+.prod .info {
+  padding: 10px;
+}
+
+.prod .info h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.prod .vermas {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-top: 5px;
+  background: #00a8e8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.prod .vermas:hover {
+  background: #0077b6;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* ======== LOGIN ======== */
+.main-login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    background-color: #f5f5f5; 
+    padding: 20px;
+}
+
+.main-login-register section{
+    display: flex;
+    justify-content: center;
+
+}
+
+.formulario-login {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+}
+
+/* Título del formulario */
+.formulario-login h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333333;
+}
+
+/* Inputs */
+.formulario-login input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botón Ingresar */
+.formulario-login .ref-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario-login .ref-ingresar:hover {
+    background-color: #0056b3;
+}
+
+/* Texto de crear cuenta */
+.formulario-login .crear-cuenta p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.formulario-login .crear-cuenta a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.formulario-login .crear-cuenta a:hover {
+    text-decoration: underline;
+}
+
+
+/* ======== REGISTRO ======== */
+.mainusuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f2f2f2; 
+}
+
+.usuario {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.mainusuario h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.usuario input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.usuario button {
+  display: inline-block;
+  background: #00a8e8;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.usuario button:hover {
+  background: #0077b6;
+}
+
+/* ======== DETALLE PRODUCTO (actualizado) ======== */
+.mainproductos2 {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  padding: 30px;
+  flex-wrap: wrap; 
+}
+
+.detalleproducto {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    display: flex;
+}
+
+.fotos {
+    display: inline-block;
+    vertical-align: top; 
+    width: 200px;        
+    text-align: center;  
+    font-size: 16px;     
+    margin-right: 30px;  
+}
+
+.fotos img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px; 
+    border-radius: 8px;
+}
+
+.descripcion {
+  /* ocupa más espacio que las imágenes */
+    min-width: 300px;
+}
+
+/* CATEGORIAS */
+.trajedebaño {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.trajedebaño h2 {
+    font-size: 32px;
+    color: #222;
+}
+
+.categoriatrajedebano {
+    padding: 0 20px 40px 20px;
+}
+
+.productoscategoria {
+    background: #faf7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    
+}
+
+.productoscategoria:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.productoscategoria img {
+    width: 80%; 
+    max-width: 180px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 6px; 
+}
+
+
+.infotraje {
+    padding: 15px;
+    text-align: center;
+}
+
+.infotraje h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.infotraje p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.infotraje .vermas {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #080909;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.infotraje .vermas:hover {
+    background: #098ad0;
+}
+.cuenta-usuario {
+    text-decoration: none;
+}

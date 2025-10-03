@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./img/logo.PI.png" alt=""></a>
+        </div>
+        <!-- barra de navegacion -->
+        <nav>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="a" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+        </nav>
+        <nav>
+            <div class="logres">
+                <a href="login.html">LOGIN</a>
+                <a href="registro.html">REGISTRO</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mainusuario">
+        <div class="usuario">
+            <h2>REGISTRO</h2>
+            <form action="./index.html">
+                <div>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="password" name="contraseña" placeholder="Contraseña" required>
+                </div>
+                <div>
+                    <input type="password" name="rep-contra" placeholder="Repetir Contraseña" required>
+                </div>
+                <div>
+                    <button type="submit">Registrarme</button>
+                </div>
+                <div>
+                    <button type="submit"><a href="./login.html" class="cuenta-usuario"> Ya tengo cuenta</a></button>
+                </div>
+                <br>
+                <div>
+                    <label for="acep">Acepto terminos y condiciones</label>
+                    <input type="checkbox" name="acep" id="acep">
+                </div>
+            </form>  
+        </div>
+    </main>
+    <footer>
+        <p>Integrantes del grupo: Justo Muiña, Belisario Araoz y Luca Carpaneto</p>
+    </footer>
+</body>
+</html>
