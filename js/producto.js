@@ -3,6 +3,9 @@ console.log(queryString);
 let urlParams = new URLSearchParams(queryString);
 let productoId = urlParams.get("id");
 console.log(productoId);
+
+let comentarios = document.querySelector('.comentarios')
+
 fetch(`https://dummyjson.com/products/${productoId}`)
     .then(function (response) {
         return response.json();
@@ -17,27 +20,40 @@ fetch(`https://dummyjson.com/products/${productoId}`)
             <p class="descPro">${data.description}</p>
             <p class="precioPro">${data.price}</p>
             <p class="stockPro">${data.stock}</p>
-            <section class="comment">
-                <p class="rating">${data.reviews[0].rating}</p>
-                <p class="user">${data.reviews[0].reviewerName}</p>
-                <p class="comment">${data.reviews[0].comment}</p>
-                <p class="date">${data.reviews[0].date}</p>
-            </section>
-                        <section class="comment">
-                <p class="rating">${data.reviews[1].rating}</p>
-                <p class="user">${data.reviews[1].reviewerName}</p>
-                <p class="comment">${data.reviews[1].comment}</p>
-                <p class="date">${data.reviews[1].date}</p>
-            </section>
-                        <section class="comment">
-                <p class="rating">${data.reviews[2].rating}</p>
-                <p class="user">${data.reviews[2].reviewerName}</p>
-                <p class="comment">${data.reviews[2].comment}</p>
-                <p class="date">${data.reviews[2].date}</p>
-            </section>
-            <section class="sectionCom">
-                
+                    <a href="./categorias.html?category=${data.category}">
+                                <p class="catPro"> ${data.category.replaceAll("-", " ")}</p>
+                    </a>`
+
+        for (let i = 0; i < data.reviews.length; i++) {
+
+            comentarios.innerHTML +=
+                `<section class="comment">
+                <p class="rating">${data.reviews[i].rating}</p>
+                <p class="user">${data.reviews[i].reviewerName}</p>
+                <p class="comment">${data.reviews[i].comment}</p>
+                <p class="date">${data.reviews[i].date}</p>
             </section>`
-
-
+        }
     })
+let formulario = document.querySelector(".buscadorForm");
+let campoBusqueda = document.querySelector('.buscadorInput');
+let errorBusqueda = document.querySelector('.invalid-feedback-searchInput');
+
+formulario.addEventListener('submit', function (event) {
+    event.preventDefault();
+    let valid = true;
+
+    if (campoBusqueda.value === "") {
+        errorBusqueda.innerText = 'Por favor complete el campo de búsqueda';
+        errorBusqueda.style.display = 'block';
+        valid = false;
+    }
+    else if (campoBusqueda.value.length < 3) {
+        errorBusqueda.innerText = 'El término de búsqueda debe tener al menos 3 caracteres';
+        errorBusqueda.style.display = 'block';
+        valid = false;
+    }
+    if (valid) {
+        formulario.submit();
+    }
+});
