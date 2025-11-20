@@ -12,9 +12,10 @@
             <a href="index.html"><img src="./img/logo.PI.png" alt=""></a>
         </div>
         <nav>
-            <form action="search.html" method="get">
-                <input type="text" name="a" placeholder="Buscar productos...">
-                <button type="submit">Buscar</button>
+            <form class="buscadorForm" action="search.html" method="get">
+                <input class="buscadorInput" type="text" name="a" placeholder="Buscar productos...">
+                <button type="submit" class="buscadorBoton">Buscar</button>
+                <div class="invalid-feedback-searchInput"></div>
             </form>
         </nav>
         <nav>
@@ -27,30 +28,6 @@
     <main>
         <aside>
             <ul class="menu">
-                <li><a href="categorias.html?category=beauty">Beauty</a></li>
-                <li><a href="categorias.html?category=fragrances">Fragrances</a></li>
-                <li><a href="categorias.html?category=furniture">Furniture</a></li>
-                <li><a href="categorias.html?category=groceries">Groceries</a></li>
-                <li><a href="categorias.html?category=home_decoration">Home Decoration</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">-----</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">-----</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">-----</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">-----</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
-                <li><a href="categorias.html?category=">------</a></li>
             </ul>
         </aside>
         <section class="Productos Aleatorios">
@@ -64,5 +41,6 @@
         <p>Integrantes: Justo Muiña, Belisario Araoz y Luca Carpaneto</p>
     </footer>
 <script src="./js/index.js"></script>
+<script src="./js/searchError.js"></script>
 </body>
 </html>
