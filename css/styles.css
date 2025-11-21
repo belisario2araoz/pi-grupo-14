@@ -459,6 +459,8 @@ footer {
 
 .seccion-comentarios h3 {
     margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
 }
 
 .lista-comentarios {
@@ -478,17 +480,19 @@ footer {
 
 .rating {
     font-weight: bold;
+    color: #000;
     margin-bottom: 10px;
 }
 
 .comment {
-    font-style: italic;
+    font-weight: bold;
+    color: #000;
+    font-style: normal;
     margin-bottom: 15px;
-    color: #555;
 }
 
 .user {
     font-weight: bold;
+    color: #000;
     text-align: right;
-    color: #333;
 }

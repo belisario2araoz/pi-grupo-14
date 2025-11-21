@@ -36,7 +36,7 @@ fetch(`https://dummyjson.com/products/${productoId}`)
         for (let i = 0; i < data.reviews.length; i++) {
             contenedorComentarios.innerHTML += `
                 <article class="comment-card">
-                    <p class="rating">⭐ ${data.reviews[i].rating}</p>
+                    <p class="rating"> ${data.reviews[i].rating}</p>
                     <p class="comment">"${data.reviews[i].comment}"</p>
                     <p class="user">- ${data.reviews[i].reviewerName}</p>
                 </article>
