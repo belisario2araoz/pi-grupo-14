@@ -19,3 +19,24 @@ formulario.addEventListener('submit', function(event){
     if (valid) {
         formulario.submit();
 }});
+
+function loginUsuario (event){
+    event.preventDefault()
+    const email = document.querySelector("#email").value
+    const password = document.querySelector("#password").value
+
+    const storedUser = JSON.parse(localStorage.getItem('registeredUser'))
+    if(!storedUser){
+        alert("no hay ningun usuario registrado")
+        return
+    }
+    if (storedUser.email === email && storedUser.password === password){
+        localStorage.setItem("loggedUser", JSON.stringify({email}))
+        alert("login exitoso")
+        window.location.href = 'index.html'
+
+    }else{
+        alert('email o contrasenia incorrecta')
+    }
+
+}
