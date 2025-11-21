@@ -1,22 +1,22 @@
 fetch('https://dummyjson.com/products?limit=194')
-.then(function(response){
-    return response.json();
-})
-.then(function(data){
-console.log(data);
-productos=data.products
-console.log(productos);
-let masVendidos = document.querySelector("section.Productos_mas_vendidos")
- masVendidos.innerHTML = ` <h2>
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+        productos = data.products
+        console.log(productos);
+        let masVendidos = document.querySelector("section.Productos_mas_vendidos")
+        masVendidos.innerHTML = ` <h2>
                     PRODUCTOS MAS VENDIDOS
                 </h2>`
-let random = document.querySelector("section.Productos")
-random.innerHTML = `<h2>
+        let random = document.querySelector("section.Productos")
+        random.innerHTML = `<h2>
                     PRODUCTOS ALEATORIOS
-                </h2>` 
-for (i = 0; i < productos.length; i++) {
-if(productos[i].category == "fragrances"){
-random.innerHTML += `
+                </h2>`
+        for (i = 0; i < productos.length; i++) {
+            if (productos[i].category == "fragrances") {
+                random.innerHTML += `
             <article class="prod">
                 <img src="${productos[i].thumbnail}" alt="${productos[i].title}" />
                 <div class="info">
@@ -27,9 +27,9 @@ random.innerHTML += `
                 </div>
             </article>
 `
-}
-else if(productos[i].category == "sunglasses"){
-masVendidos.innerHTML += `
+            }
+            else if (productos[i].category == "sunglasses") {
+                masVendidos.innerHTML += `
             <article class="prod">
                 <img src="${productos[i].thumbnail}" alt="${productos[i].title}" />
                 <div class="info">
@@ -40,37 +40,39 @@ masVendidos.innerHTML += `
                 </div>
             </article>
 `
-}
+            }
 
-else{
+            else {
 
-}}});
+            }
+        }
+    });
 
 
 let divCategoria = document.querySelector(".menu")
 
 
 fetch("https://dummyjson.com/products/categories")
-.then(function(response){
-    return response.json();
-})
-.then(function(data){
-    console.log(data)
-    for(let i = 0; i<data.length ;i++){
-    divCategoria.innerHTML += `<li><a href="categorias.html?category=${data[i].name}">${data[i].name}</a></li>`
-    }
-})
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data)
+        for (let i = 0; i < data.length; i++) {
+            divCategoria.innerHTML += `<li><a href="categorias.html?category=${data[i].slug}">${data[i].name}</a></li>`
+        }
+    })
 
 
 
-let formulario = document.querySelector(".buscadorForm");  
-let campoBusqueda = document.querySelector('.buscadorInput'); 
-let errorBusqueda = document.querySelector('.invalid-feedback-searchInput');  
+let formulario = document.querySelector(".buscadorForm");
+let campoBusqueda = document.querySelector('.buscadorInput');
+let errorBusqueda = document.querySelector('.invalid-feedback-searchInput');
 
-formulario.addEventListener('submit', function(event){
+formulario.addEventListener('submit', function (event) {
     event.preventDefault();
     let valid = true;
-    
+
     if (campoBusqueda.value === "") {
         errorBusqueda.innerText = 'Por favor complete el campo de búsqueda';
         errorBusqueda.style.display = 'block';
@@ -80,7 +82,8 @@ formulario.addEventListener('submit', function(event){
         errorBusqueda.innerText = 'El término de búsqueda debe tener al menos 3 caracteres';
         errorBusqueda.style.display = 'block';
         valid = false;
-    } 
+    }
     if (valid) {
         formulario.submit();
-}});
+    }
+});
