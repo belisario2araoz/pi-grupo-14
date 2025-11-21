@@ -47,5 +47,5 @@ function registroUsuario(e) {
     localStorage.setItem('loggedUSer', JSON.stringify({email}))
 
     window.location.href = 'index.html'
-
+this.submit()
 }

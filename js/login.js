@@ -38,5 +38,5 @@ function loginUsuario (event){
     }else{
         alert('email o contrasenia incorrecta')
     }
-
+this.submit()
 }

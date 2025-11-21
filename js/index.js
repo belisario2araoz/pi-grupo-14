@@ -103,7 +103,7 @@ if(userJSON){
     authButtons.style.display = 'none'
 
     userInfo.style.display = 'inline-flex'
-    userName.innerHTML = ⁠ Hola ${user.email} ⁠
+    userName.innerHTML = `Hola ${user.email}`
 }else{
     authButtons.style.display = 'inline-flex'
     userInfo.style.display = 'none'
