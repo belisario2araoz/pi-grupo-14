@@ -3,6 +3,8 @@ let productoId = queryString.split("=")[1];
 
 let seccion = document.querySelector(".detalleproducto");
 
+seccion.innerHTML = '<h2 class="tituloPro" style="text-align:center">Cargando...</h2>';
+
 fetch(`https://dummyjson.com/products/${productoId}`)
     .then(function (response) {
         return response.json();
